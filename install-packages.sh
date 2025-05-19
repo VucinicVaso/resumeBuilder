@@ -13,6 +13,7 @@ npm init
 
 # Lista paketa za instalaciju
 PAKETI=(
+    -g ts-node
     -D typescript             # ( install typescript )
     ts-node                   # ( install typescript execution )
     express                   # ( install express framework )

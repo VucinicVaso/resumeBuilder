@@ -1,5 +1,20 @@
 # Portfolio website
 Aplikacija za generisanje CV-ja.
+    # front app    (UI): Prikazuju se podaci: portfolio, skills, education, experience, contact form... 
+                         Kreirati pomocu HTML5, CSS3, Tailwind-a, React.js... 
+                         Potrebno je kreirati vise UI-a. Svaki put kada korisnik otvori sajt prikazat ce se nasumicni UI,
+    # backend app  (UI): Admin dashboard. 
+                         Preko dashboard-a vrsit ce se CRUD za: portfolio, skills, education, experience, messages, kreiranje cv-a, cover letter-a....
+    # rest api    (api): Kreiran u Express.js-u (Typescript, MongoDB (Mongoose), ...). 
+                         Rest api za front (user), backend (admin) aplikacije i mobilne aplikacije
+
+
+# HOW-TO: 
+    # pokreni skriptu install-packages.sh ( inicijalizacija node.js-a, instalacija paketa, kreiranje .env fajla)
+    # npm run dev                         ( start server from src )
+    # rs                                  ( restart typescript server )
+    # npm run build                       ( build js project from typescript project )
+    # npm run start                       ( start js app server from dist )
 
 
 # odraditi:
@@ -19,25 +34,3 @@ Aplikacija za generisanje CV-ja.
     # (-) kreirati mobilnu aplikaciju (user)
 
 
-# create project:
-    # npm install -g ts-node                  ( install if not installed )
-    # mkdir naziv_projekta                    ( create project folder )
-    # cd naziv_projekta                       ( locate folder )
-    # pokreni skriptu install-packages.sh     ( inicijalizacija node.js-a, instalacija paketa, kreiranje .env fajla)
-
-
-## start project (run project in dev || build mode): 
-    # npm run dev                  ( start server from src )
-    # rs                           ( restart typescript server )
-    # npm run build                ( build js project from typescript project )
-    # npm run start                ( start js app server from dist )
-
-
-# Project contains three apps:
-    # front app    (UI): Prikazuju se podaci: portfolio, skills, education, experience, contact form... 
-                         Kreirati pomocu HTML5, CSS3, Tailwind-a, React.js... 
-                         Potrebno je kreirati vise UI-a. Svaki put kada korisnik otvori sajt prikazat ce se nasumicni UI,
-    # backend app  (UI): Admin dashboard. 
-                         Preko dashboard-a vrsit ce se CRUD za: portfolio, skills, education, experience, messages, kreiranje cv-a, cover letter-a....
-    # rest api    (api): Kreiran u Express.js-u (Typescript, MongoDB (Mongoose), ...). 
-                         Rest api za front (user), backend (admin) aplikacije i mobilne aplikacije
