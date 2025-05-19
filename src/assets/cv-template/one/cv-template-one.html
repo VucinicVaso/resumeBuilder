@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtt">
+<html xmlns="http://www.w3.org/1000/xhtml">
+    <head>
+        <title>Vaso Vucinic</title>
+        <meta http-equiv="Content-Type" charset="txt/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="http://192.168.1.68:443/static/cv-template/one/{{ cssTemplate }}" />
+    </head>
+    <body id="paper">
+        <div id="content_body">
+
+            <!---------------------------------------- left_side ---------------------------------------->
+            <div id="left_side">
+
+                <div id="cv_avatar_div">
+                    <p id="cv_avatar_div_p">{{ user.initials }}</p>
+                </div>
+
+                <!------------ left-side info-section ------------>
+                <div id="cv_content_title">
+                    <p id="cv_content_title_title">{{ user.fullName }}</p>
+                    <p id="cv_content_title_subtitle">{{ user.position }}</p>
+                </div>
+                <div id="cv_content">
+                    <div id="cv_content_div">
+                        <p id="cv_content_icon"><i class="fa-regular fa-calendar"></i></p>
+                        <p id="cv_content_value">{{ user.dateOfBirth }}</p>
+                    </div>
+                </div>
+                <div id="cv_content">
+                    <div id="cv_content_div">
+                        <p id="cv_content_icon"><i class="fa-solid fa-phone"></i></p>
+                        <p id="cv_content_value">{{ user.phone }}</p>
+                    </div>
+                </div>
+                <div id="cv_content">
+                    <div id="cv_content_div">
+                        <p id="cv_content_icon"><i class="fa-regular fa-envelope"></i></p>
+                        <p id="cv_content_value">{{ user.email }}</p>
+                    </div>
+                </div>
+                <div id="cv_content">
+                    <div id="cv_content_div">
+                        <p id="cv_content_icon"><i class="fa-solid fa-passport"></i></p>
+                        <p id="cv_content_value">{{ user.citizenship }}</p>
+                    </div>
+                </div>
+                <hr id="left_side_hr" />
+
+                <!------------ left-side social-section ------------>
+                <div id="cv_content_title">
+                    <p id="cv_content_title_title">SOCIAL</p>
+                </div>
+                <div id="cv_content">
+                    <div id="cv_content_div">
+                        <p id="cv_content_icon"><i class="fa-solid fa-globe"></i></p>
+                        <p id="cv_content_value"><a href="{{ social.website.address }}">{{ social.website.name }}</a></p>
+                    </div>
+                </div>
+                <div id="cv_content">
+                    <div id="cv_content_div">
+                        <p id="cv_content_icon"><i class="fa-brands fa-linkedin"></i></p>
+                        <p id="cv_content_value"><a href="{{ social.linkedIn.address }}">{{ social.linkedIn.name }}</a></p>
+                    </div>
+                </div>
+                <div id="cv_content">
+                    <div id="cv_content_div">
+                        <p id="cv_content_icon"><i class="fa-solid fa-language"></i></p>
+                        <p id="cv_content_value"><a href="{{ social.github.address }}">{{ social.github.name }}</a></p>
+                    </div>
+                </div>
+                <hr id="left_side_hr" />
+
+                <!------------ left-side languages-section ------------>
+                <div id="cv_content_title">
+                    <p id="cv_content_title_title">LANGUAGES</p>
+                </div>
+                {{#each languages}}
+                <div id="cv_content">
+                    <div id="cv_content_div">
+                        <p id="cv_content_icon"><i class="fa-solid fa-language"></i></p>
+                        <p id="cv_content_value">{{ this.name }}</p>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+    
+            <!---------------------------------------- right_side ---------------------------------------->
+            <div id="right_side">
+
+                <!------------ about ------------>
+                <div id="cv_content_item" class="cv_about">
+                    <div id="cv_content_item_title"><p>About Me</p></div>
+
+                    <p>{{ user.aboutMe }}</p>
+                </div>
+                <hr id="right_side_hr" />
+
+                <!------------ experience ------------>
+                {{#ifCond experience "!==" "NULL"}}
+                <div id="cv_content_item" class="cv_experience cv_list">
+                    <div id="cv_content_item_title"><p>Work Experience</p></div>
+
+                    <ul>
+                        {{#each experience}}
+                        <li>
+                            <div class="date">{{this.date}}</div>
+                            <div class="info">
+                                {{#ifCond this.title "!==" "NULL" }}<p id="info_title">{{this.title}}</p>{{/ifCond}}
+                                {{#ifCond this.position "!==" "NULL" }}<p id="info_position">{{this.position}}</p>{{/ifCond}}
+                                {{#ifCond this.description "!==" "NULL"}}<p id="info_desc">{{this.description}}</p>{{/ifCond}}
+                            </div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <hr id="right_side_hr" />
+                {{/ifCond}}
+
+                <!------------ education ------------>
+                {{#ifCond education "!==" "NULL"}}
+                <div id="cv_content_item" class="cv_education cv_list">
+                    <div id="cv_content_item_title"><p>Education</p></div>
+                    
+                    <ul>
+                        {{#each education}}
+                        <li>
+                            {{#ifCond this.title "!==" "NULL"}}<div class="date">{{this.date}}</div>{{/ifCond}}
+                            <div class="info">
+                                {{#ifCond this.title "!==" "NULL"}}<p id="info_title">{{this.title}}</p>{{/ifCond}}
+                                {{#ifCond this.position "!==" "NULL"}}<p id="info_position">{{this.position}}</p>{{/ifCond}}
+                                {{#ifCond this.description "!==" "NULL"}}<p id="info_desc">{{this.description}}</p>{{/ifCond}}
+                            </div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <hr id="right_side_hr" />
+                {{/ifCond}}
+
+                <!------------ skills ------------>
+                {{#ifCond skills "!==" "NULL"}}
+                <div id="cv_content_item" class="cv_skills">
+                    <div id="cv_content_item_title"><p>Skills</p></div>
+                    
+                    {{#each skills}}
+                    <div id="skills_list">
+                        {{#each this}}<p>{{this}}</p>{{/each}}
+                    </div>
+                    {{/each}}
+                </div>
+                <hr id="right_side_hr" />
+                {{/ifCond}}
+
+                <!------------ portfolio ------------>
+                {{#ifCond portfolio "!==" "NULL"}}
+                <div id="cv_content_item" class="cv_portfolio cv_list">
+                    <div id="cv_content_item_title"><p>Portfolio</p></div>
+
+                    <ul>
+                        {{#each portfolio}}
+                        <li>
+                            {{#ifCond this.title "!==" "NULL"}}<div class="date">{{this.title}}</div>{{/ifCond}}
+                            <div class="info">
+                                {{#ifCond this.type "!==" "NULL"}}<p id="info_position">{{this.type}}</p>{{/ifCond}}
+                                {{#ifCond this.description "!==" "NULL"}}<p id="info_desc">{{this.description}}</p>{{/ifCond}}
+                            </div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                {{/ifCond}}
+
+            </div>
+
+        </div>      
+    </body>
+</html>
