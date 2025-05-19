@@ -1,12 +1,13 @@
 # Portfolio website
 Aplikacija za generisanje CV-ja.
-    # front app    (UI): Prikazuju se podaci: portfolio, skills, education, experience, contact form... 
-                         Kreirati pomocu HTML5, CSS3, Tailwind-a, React.js... 
-                         Potrebno je kreirati vise UI-a. Svaki put kada korisnik otvori sajt prikazat ce se nasumicni UI,
-    # backend app  (UI): Admin dashboard. 
-                         Preko dashboard-a vrsit ce se CRUD za: portfolio, skills, education, experience, messages, kreiranje cv-a, cover letter-a....
-    # rest api    (api): Kreiran u Express.js-u (Typescript, MongoDB (Mongoose), ...). 
-                         Rest api za front (user), backend (admin) aplikacije i mobilne aplikacije
+
+## rest api (api): Kreiran u Express.js-u (Typescript, MongoDB (Mongoose), ...). 
+    Rest api za front (user), backend (admin) aplikacije i mobilne aplikacije
+## front app (UI): Prikazuju se podaci: portfolio, skills, education, experience, contact form... 
+    Kreirati pomocu HTML5, CSS3, Tailwind-a, React.js... 
+    Potrebno je kreirati vise UI-a. Svaki put kada korisnik otvori sajt prikazat ce se nasumicni UI,
+## backend app (UI): Admin dashboard. 
+    Preko dashboard-a vrsit ce se CRUD za: portfolio, skills, education, experience, messages, kreiranje cv-a, cover letter-a....
 
 
 # HOW-TO: 
