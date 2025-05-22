@@ -1,7 +1,7 @@
 import JoiValidationMiddleware         from '../../../util/middleware/joiValidationMiddleware'
 import JWTAuthenticationMiddleware     from '../../../util/middleware/jwtAuthenticationMiddleware'
-import AdminAuthoritizationMiddleware  from '../../../util/middleware/adminAuthoritizationMiddleware'
-import MessageExecutorManager          from '../../../util/executor/messageExecutorManager'
+import AdminAuthorizationMiddleware    from '../../../util/middleware/adminAuthorizationMiddleware'
+import MessageExecutorManager          from '../../../service/executor/messageExecutorManager'
 import UserRepository                  from '../../../repository/userRepository'
 import UserRepositoryImpl              from '../../../repository/impl/userRepositoryImpl'
 import ExperienceRepository            from '../../../repository/experienceRepository'
@@ -30,7 +30,7 @@ class ExperienceMessageExecutorManager extends MessageExecutorManager {
             'getById',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new JoiValidationMiddleware(
                         GetExperienceByIdValidation.validationSchema,
                         new GetByIdMessageExecutor(this.experienceRepository)
@@ -43,7 +43,7 @@ class ExperienceMessageExecutorManager extends MessageExecutorManager {
             'getAll',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new GetAllMessageExecutor(this.experienceRepository)
                 )
             )
@@ -53,7 +53,7 @@ class ExperienceMessageExecutorManager extends MessageExecutorManager {
             'create',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new JoiValidationMiddleware(
                         CreateExperienceValidation.validationSchema,
                         new CreateMessageExecutor(this.experienceRepository)
@@ -66,7 +66,7 @@ class ExperienceMessageExecutorManager extends MessageExecutorManager {
             'update',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new JoiValidationMiddleware(
                         UpdateExperienceValidation.validationSchema,
                         new UpdateMessageExecutor(this.experienceRepository)
@@ -79,7 +79,7 @@ class ExperienceMessageExecutorManager extends MessageExecutorManager {
             'destroy',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new JoiValidationMiddleware(
                         DestroyExperienceValidation.validationSchema,
                         new DestroyMessageExecutor(this.experienceRepository)

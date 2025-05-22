@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express'
 
 /**
- * 
+ * message executor
  */
 interface MessageExecutor {
 

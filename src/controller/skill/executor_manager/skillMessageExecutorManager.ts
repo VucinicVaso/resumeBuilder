@@ -1,7 +1,7 @@
 import JoiValidationMiddleware        from '../../../util/middleware/joiValidationMiddleware'
 import JWTAuthenticationMiddleware    from '../../../util/middleware/jwtAuthenticationMiddleware'
-import AdminAuthoritizationMiddleware from '../../../util/middleware/adminAuthoritizationMiddleware'
-import MessageExecutorManager         from '../../../util/executor/messageExecutorManager'
+import AdminAuthorizationMiddleware   from '../../../util/middleware/adminAuthorizationMiddleware'
+import MessageExecutorManager         from '../../../service/executor/messageExecutorManager'
 import UserRepository                 from '../../../repository/userRepository'
 import UserRepositoryImpl             from '../../../repository/impl/userRepositoryImpl'
 import SkillRepository                from '../../../repository/skillRepository'
@@ -30,7 +30,7 @@ class SkillMessageExecutorManager extends MessageExecutorManager {
             'getById',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new JoiValidationMiddleware(
                         GetSkillByIdValidation.validationSchema,
                         new GetByIdMessageExecutor(this.skillRepository)
@@ -43,7 +43,7 @@ class SkillMessageExecutorManager extends MessageExecutorManager {
             'getAll',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new GetAllMessageExecutor(this.skillRepository)
                 )
             )
@@ -53,7 +53,7 @@ class SkillMessageExecutorManager extends MessageExecutorManager {
             'create',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new JoiValidationMiddleware(
                         CreateSkillValidation.validationSchema,
                         new CreateMessageExecutor(this.skillRepository)
@@ -66,7 +66,7 @@ class SkillMessageExecutorManager extends MessageExecutorManager {
             'update',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new JoiValidationMiddleware(
                         UpdateSkillValidation.validationSchema,
                         new UpdateMessageExecutor(this.skillRepository)
@@ -79,7 +79,7 @@ class SkillMessageExecutorManager extends MessageExecutorManager {
             'destroy',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new JoiValidationMiddleware(
                         DestroySkillValidation.validationSchema,
                         new DestroyMessageExecutor(this.skillRepository)

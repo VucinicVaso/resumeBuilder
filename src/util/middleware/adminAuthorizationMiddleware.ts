@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express'
 import AppMiddleware                       from './appMiddleware'
-import MessageExecutor                     from '../executor/messageExecutor'
+import MessageExecutor                     from '../../service/executor/messageExecutor'
 
 /**
  * Middleware for admin validator for received HTTP request

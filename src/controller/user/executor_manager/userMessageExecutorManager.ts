@@ -1,7 +1,7 @@
 import JoiValidationMiddleware           from '../../../util/middleware/joiValidationMiddleware'
 import JWTAuthenticationMiddleware       from '../../../util/middleware/jwtAuthenticationMiddleware'
-import AdminAuthoritizationMiddleware    from '../../../util/middleware/adminAuthoritizationMiddleware'
-import MessageExecutorMenager            from '../../../util/executor/messageExecutorManager'
+import AdminAuthorizationMiddleware      from '../../../util/middleware/adminAuthorizationMiddleware'
+import MessageExecutorManager            from '../../../service/executor/messageExecutorManager'
 import UserRepository                    from '../../../repository/userRepository'
 import UserRepositoryImpl                from '../../../repository/impl/userRepositoryImpl'
 import GetUserByIdMessageExecutor        from '../executor/getUserByIdMessageExecutor'
@@ -15,7 +15,7 @@ import { DestroyUserValidation }         from '../validator/destroyValidation'
 import { UpdateUsersProfileValidation }  from '../validator/updateProfileValidator'
 import { UpdateUsersPasswordValidation } from '../validator/updatePasswordValidator'
 
-class UserMessageExecutorMenager extends MessageExecutorMenager {
+class UserMessageExecutorMenager extends MessageExecutorManager {
 
     private userRepository?: UserRepository
 
@@ -27,7 +27,7 @@ class UserMessageExecutorMenager extends MessageExecutorMenager {
             'getById', 
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new JoiValidationMiddleware(
                         GetUserByIdValidation.validationSchema,
                         new GetUserByIdMessageExecutor(this.userRepository!)
@@ -40,7 +40,7 @@ class UserMessageExecutorMenager extends MessageExecutorMenager {
             'getAll',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new GetAllUsersMessageExecutor(this.userRepository!)
                 )
             )
@@ -50,7 +50,7 @@ class UserMessageExecutorMenager extends MessageExecutorMenager {
             'updateProfile',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new JoiValidationMiddleware(
                         UpdateUsersProfileValidation.validationSchema,
                         new UpdateProfileMessageExecutor(this.userRepository!)
@@ -63,7 +63,7 @@ class UserMessageExecutorMenager extends MessageExecutorMenager {
             'updateAvatar',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new UpdateAvatarMessageExecutor(this.userRepository!)
                 )
             )
@@ -73,7 +73,7 @@ class UserMessageExecutorMenager extends MessageExecutorMenager {
             'updatePassword',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new JoiValidationMiddleware(
                         UpdateUsersPasswordValidation.validationSchema,
                         new UpdatePasswordMessageExecutor(this.userRepository!)
@@ -86,7 +86,7 @@ class UserMessageExecutorMenager extends MessageExecutorMenager {
             'destroy',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new JoiValidationMiddleware(
                         DestroyUserValidation.validationSchema,
                         new DestroyUserMessageExecutor(this.userRepository!)

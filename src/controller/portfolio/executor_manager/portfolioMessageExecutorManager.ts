@@ -1,7 +1,7 @@
 import JoiValidationMiddleware        from '../../../util/middleware/joiValidationMiddleware'
 import JWTAuthenticationMiddleware    from '../../../util/middleware/jwtAuthenticationMiddleware'
-import AdminAuthoritizationMiddleware from '../../../util/middleware/adminAuthoritizationMiddleware'
-import MessageExecutorManager         from '../../../util/executor/messageExecutorManager'
+import AdminAuthorizationMiddleware   from '../../../util/middleware/adminAuthorizationMiddleware'
+import MessageExecutorManager         from '../../../service/executor/messageExecutorManager'
 import UserRepository                 from '../../../repository/userRepository'
 import UserRepositoryImpl             from '../../../repository/impl/userRepositoryImpl'
 import PortfolioRepository            from '../../../repository/portfolioRepository'
@@ -30,7 +30,7 @@ class PortfolioMessageExecutorManager extends MessageExecutorManager {
             'getById',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new JoiValidationMiddleware(
                         GetPortfolioByIdValidation.validationSchema,
                         new GetByIdMessageExecutor(this.portfolioRepository)
@@ -43,7 +43,7 @@ class PortfolioMessageExecutorManager extends MessageExecutorManager {
             'getAll',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new GetAllMessageExecutor(this.portfolioRepository)
                 )
             )
@@ -53,7 +53,7 @@ class PortfolioMessageExecutorManager extends MessageExecutorManager {
             'create',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new JoiValidationMiddleware(
                         CreatePortfolioValidation.validationSchema,
                         new CreateMessageExecutor(this.portfolioRepository)
@@ -66,7 +66,7 @@ class PortfolioMessageExecutorManager extends MessageExecutorManager {
             'update',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new JoiValidationMiddleware(
                         UpdatePortfolioValidation.validationSchema,
                         new UpdateMessageExecutor(this.portfolioRepository)
@@ -80,7 +80,7 @@ class PortfolioMessageExecutorManager extends MessageExecutorManager {
             'destroy',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new JoiValidationMiddleware(
                         DestroyPortfolioValidation.validationSchema,
                         new DestroyMessageExecutor(this.portfolioRepository)

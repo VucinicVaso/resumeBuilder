@@ -2,7 +2,7 @@ import express       from 'express'
 import colors        from 'colors'
 import morgan        from 'morgan'
 import Environment   from './util/enviroment/environment'
-import Database      from './util/database/database'
+import Database      from './service/database/database'
 import AppRouter     from './router/router'
 import AppMiddleware from './util/middleware/appMiddleware'
 

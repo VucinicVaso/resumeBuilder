@@ -1,7 +1,7 @@
 import JoiValidationMiddleware        from '../../../util/middleware/joiValidationMiddleware'
 import JWTAuthenticationMiddleware    from '../../../util/middleware/jwtAuthenticationMiddleware'
-import AdminAuthoritizationMiddleware from '../../../util/middleware/adminAuthoritizationMiddleware'
-import MessageExecutorManager         from '../../../util/executor/messageExecutorManager'
+import AdminAuthorizationMiddleware   from '../../../util/middleware/adminAuthorizationMiddleware'
+import MessageExecutorManager         from '../../../service/executor/messageExecutorManager'
 import CreateMessageExecutor          from '../executor/createMessageExecutor'
 import UpdateMessageExecutor          from '../executor/updateMessageExecutor'
 import DestroyMessageExecutor         from '../executor/destroyMessageExecutor'
@@ -30,7 +30,7 @@ class EducationMessageExecutorManager extends MessageExecutorManager {
             'getById',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new JoiValidationMiddleware(
                         GetEducationByIdValidation.validationSchema,
                         new GetByIdMessageExecutor(this.educationRepository)
@@ -43,7 +43,7 @@ class EducationMessageExecutorManager extends MessageExecutorManager {
             'getAll',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new GetAllMessageExecutor(this.educationRepository)
                 )
             )
@@ -53,7 +53,7 @@ class EducationMessageExecutorManager extends MessageExecutorManager {
             'create',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new JoiValidationMiddleware(
                         CreateEducationValidation.validationSchema,
                         new CreateMessageExecutor(this.educationRepository)
@@ -66,7 +66,7 @@ class EducationMessageExecutorManager extends MessageExecutorManager {
             'update',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new JoiValidationMiddleware(
                         UpdateEducationValidation.validationSchema,
                         new UpdateMessageExecutor(this.educationRepository)
@@ -79,7 +79,7 @@ class EducationMessageExecutorManager extends MessageExecutorManager {
             'destroy',
             new JWTAuthenticationMiddleware(
                 this.userRepository,
-                new AdminAuthoritizationMiddleware(
+                new AdminAuthorizationMiddleware(
                     new JoiValidationMiddleware(
                         DestroyEducationValidation.validationSchema,
                         new DestroyMessageExecutor(this.educationRepository)

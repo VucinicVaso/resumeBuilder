@@ -35,7 +35,7 @@ PAKETI=(
 )
 
 # Instalacija paketa
-echo "Instaliram sledeće npm pakete globalno: ${PAKETI[*]}"
+echo "Instaliram sledeće npm pakete: ${PAKETI[*]}"
 
 for paket in "${PAKETI[@]}"
 do

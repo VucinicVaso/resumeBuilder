@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express'
-import AppMiddleware                       from '../middleware/appMiddleware'
+import AppMiddleware                       from '../../util/middleware/appMiddleware'
 import MessageExecutor                     from './messageExecutor'
 
 /**

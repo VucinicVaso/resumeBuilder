@@ -1,18 +1,17 @@
 import { Router, Application, Request, Response, NextFunction } from 'express'
-import ApplicationExecutorManager                               from '../controller/applicationExecutorManager'
-import MessageExecutorManager                                   from '../util/executor/messageExecutorManager'
 import MulterFileSystem                                         from '../util/multerFileSystem/multerFileSystem'
+import ApplicationExecutorManagerService                        from '../controller/applicationExecutorManagerService'
 
 class AppRouter {
 
     public router?: Router
-    private executorManager: MessageExecutorManager
+    private messageExecutorManagerService: ApplicationExecutorManagerService
     private multerFileSystem?: MulterFileSystem
 
     constructor(app: Application) {
         this.router = Router()
         this.multerFileSystem = new MulterFileSystem('src/assets')
-        this.executorManager = new ApplicationExecutorManager()
+        this.messageExecutorManagerService = new ApplicationExecutorManagerService()
         this.init(app)
     }
 
@@ -26,7 +25,7 @@ class AppRouter {
             .post(
                 (req: Request, res: Response, next: NextFunction) => {
                     let destination : string | undefined = 'destination' in req.body ? req.body.destination.split('/')[0] : ''                
-                    this.executorManager!.call(destination!, req, res, next)
+                    this.messageExecutorManagerService!.call(destination!, req, res, next)
                 },
             )
 
@@ -46,7 +45,7 @@ class AppRouter {
                     if(req.files!.length != 1) { req.body.files = files! }
 
                     let destination : string | undefined = 'destination' in req.body ? req.body.destination.split('/')[0] : ''
-                    this.executorManager!.call(destination!, req, res, next)
+                    this.messageExecutorManagerService!.call(destination!, req, res, next)
                 },
             )
     }

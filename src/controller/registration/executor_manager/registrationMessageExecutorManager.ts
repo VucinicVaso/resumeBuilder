@@ -1,5 +1,5 @@
 import JoiValidationMiddleware from '../../../util/middleware/joiValidationMiddleware'
-import MessageExecutorManager  from '../../../util/executor/messageExecutorManager'
+import MessageExecutorManager  from '../../../service/executor/messageExecutorManager'
 import RegisterMessageExecutor from '../executor/registerMessageExecutor'
 import LoginMessageExecutor    from '../executor/loginMessageExecutor'
 import UserRepository          from '../../../repository/userRepository'
