@@ -1,16 +1,23 @@
 # Portfolio website
+
+
+## About:
 Aplikacija za generisanje CV-ja.
 
-### rest api (api): Kreiran u Express.js-u (Typescript, MongoDB (Mongoose), ...). 
-    Rest api za front (user), backend (admin) aplikacije i mobilne aplikacije
-### front app (UI): Prikazuju se podaci: portfolio, skills, education, experience, contact form... 
-    Kreirati pomocu HTML5, CSS3, Tailwind-a, React.js... 
-    Potrebno je kreirati vise UI-a. Svaki put kada korisnik otvori sajt prikazat ce se nasumicni UI,
-### backend app (UI): Admin dashboard. 
-    Preko dashboard-a vrsit ce se CRUD za: portfolio, skills, education, experience, messages, kreiranje cv-a, cover letter-a....
+### rest api (backend app): Kreiran u Express.js-u (Typescript, MongoDB (Mongoose), ...). 
+    Rest api za front (user / admin) web i mobilne aplikacije
+### frontend applications
+    - user-frontend app: 
+        Prikazuju se podaci: portfolio, skills, education, experience, contact form... 
+        Kreirati pomocu HTML5, CSS3, Tailwind-a, React.js... 
+        Potrebno je kreirati vise UI-a. 
+        Svaki put kada korisnik otvori sajt prikazat ce se nasumicni UI,
+    - admin-frontend app: Admin dashboard. 
+        Kreirati pomocu HTML5, CSS3, Tailwind-a, React.js... 
+        Preko dashboard-a vrsit ce se CRUD za: portfolio, skills, education, experience, messages, kreiranje cv-a, cover letter-a....
 
 
-# HOW-TO: 
+## HOW-TO: 
     # pokreni skriptu install-packages.sh ( inicijalizacija node.js-a, instalacija paketa, kreiranje .env fajla)
     # npm run dev                         ( start server from src )
     # rs                                  ( restart typescript server )
@@ -18,7 +25,7 @@ Aplikacija za generisanje CV-ja.
     # npm run start                       ( start js app server from dist )
 
 
-# odraditi:
+## TO-DO:
     # + (odradjeno), - (nije odradjeno), (~) nije zavrseno
     # (~) za restApi:
         # (+) registration: user registration/login
