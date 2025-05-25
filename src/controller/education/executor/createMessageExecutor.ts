@@ -3,7 +3,7 @@ import MessageExecutor                     from '../../../service/executor/messa
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { ICreateEducation }                from '../interface/iCreateEducation'
 import { IEducation }                      from '../../../model/education'
-import EducationRepository                 from '../../../repository/educationRepository'
+import EducationRepository                 from '../../../repository/education/educationRepository'
 
 class CreateMessageExecutor implements MessageExecutor {
 

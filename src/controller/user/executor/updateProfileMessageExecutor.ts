@@ -3,7 +3,7 @@ import MessageExecutor                     from '../../../service/executor/messa
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { IUpdateUsersProfile }             from '../interface/iUpdateUsersProfile'
 import { IUser }                           from '../../../model/user'
-import UserRepository                      from '../../../repository/userRepository'
+import UserRepository                      from '../../../repository/user/userRepository'
 
 class UpdateProfileMessageExecutor implements MessageExecutor {
 

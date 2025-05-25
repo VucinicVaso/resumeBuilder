@@ -2,7 +2,7 @@ import { NextFunction, Request, Response } from 'express'
 import bcrypt                              from 'bcryptjs'
 import { IUpdateUsersPassword }            from '../interface/iUpdateUsersPassword'
 import { IUser }                           from '../../../model/user'
-import UserRepository                      from '../../../repository/userRepository'
+import UserRepository                      from '../../../repository/user/userRepository'
 import MessageExecutor                     from '../../../service/executor/messageExecutor'
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 

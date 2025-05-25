@@ -3,7 +3,7 @@ import MessageExecutor                     from '../../../service/executor/messa
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { IUpdateMessage }                  from '../interface/iUpdateMessage'
 import { IMessage }                        from '../../../model/message'
-import MessageRepository                   from '../../../repository/messageRepository'
+import MessageRepository                   from '../../../repository/message/messageRepository'
 
 class UpdateMessageExecutor implements MessageExecutor {
 

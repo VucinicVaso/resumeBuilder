@@ -3,7 +3,7 @@ import MessageExecutor                     from '../../../service/executor/messa
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { IGetExperienceById }              from '../interface/IGetExperienceById'
 import { IExperience }                     from '../../../model/experience'
-import ExperienceRepository                from '../../../repository/experienceRepository'
+import ExperienceRepository                from '../../../repository/experience/experienceRepository'
 
 class GetByIdMessageExecutor implements MessageExecutor {
 

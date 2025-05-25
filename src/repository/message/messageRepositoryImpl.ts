@@ -1,6 +1,6 @@
 import{ Types }                   from 'mongoose'
 import { IMessage, MessageModel } from '../../model/message'
-import MessageRepository          from '../messageRepository'
+import MessageRepository          from './messageRepository'
 
 class MessageRepositoryImpl extends MessageRepository {
 

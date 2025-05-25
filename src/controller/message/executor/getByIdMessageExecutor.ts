@@ -3,7 +3,7 @@ import MessageExecutor                     from '../../../service/executor/messa
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { IGetMessageById }                 from '../interface/iGetMessageById'
 import { IMessage }                        from '../../../model/message'
-import MessageRepository                   from '../../../repository/messageRepository'
+import MessageRepository                   from '../../../repository/message/messageRepository'
 class GetByIdMessageExecutor implements MessageExecutor {
 
     private messageRepository?: MessageRepository

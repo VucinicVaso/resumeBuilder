@@ -2,7 +2,7 @@ import { NextFunction, Request, Response } from 'express'
 import MessageExecutor                     from '../../../service/executor/messageExecutor'
 import { IUser }                           from '../../../model/user'
 import { IGetUserById }                    from '../interface/iGetUserById'
-import UserRepository                      from '../../../repository/userRepository'
+import UserRepository                      from '../../../repository/user/userRepository'
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 
 class GetUserByIdMessageExecutor implements MessageExecutor {

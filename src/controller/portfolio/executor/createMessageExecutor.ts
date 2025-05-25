@@ -3,7 +3,7 @@ import MessageExecutor                     from '../../../service/executor/messa
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { ICreatePortfolio }                from '../interface/iCreatePortfolio'
 import { IPortfolio }                      from '../../../model/portfolio'
-import PortfolioRepository                 from '../../../repository/portfolioRepository'
+import PortfolioRepository                 from '../../../repository/portfolio/portfolioRepository'
 
 class CreateMessageExecutor implements MessageExecutor {
 

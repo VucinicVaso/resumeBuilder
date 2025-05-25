@@ -3,7 +3,7 @@ import MessageExecutor                     from '../../../service/executor/messa
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { ICreateExperience }               from '../interface/iCreateExperience'
 import { IExperience }                     from '../../../model/experience'
-import ExperienceRepository                from '../../../repository/experienceRepository'
+import ExperienceRepository                from '../../../repository/experience/experienceRepository'
 
 class CreateMessageExecutor implements MessageExecutor {
 

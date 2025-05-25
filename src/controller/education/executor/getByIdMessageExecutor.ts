@@ -3,7 +3,7 @@ import MessageExecutor                     from '../../../service/executor/messa
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { IGetEducationById }               from '../interface/iGetEducationById'
 import { IEducation }                      from '../../../model/education'
-import EducationRepository                 from '../../../repository/educationRepository'
+import EducationRepository                 from '../../../repository/education/educationRepository'
 
 class GetByIdMessageExecutor implements MessageExecutor {
 

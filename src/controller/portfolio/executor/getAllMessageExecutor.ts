@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express'
 import MessageExecutor                     from '../../../service/executor/messageExecutor'
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
-import PortfolioRepository                 from '../../../repository/portfolioRepository'
+import PortfolioRepository                 from '../../../repository/portfolio/portfolioRepository'
 import { IPortfolio }                      from '../../../model/portfolio'
 
 class GetAllMessageExecutor implements MessageExecutor {

@@ -6,7 +6,7 @@ import AppMiddleware                       from '../../../util/middleware/appMid
 import { IGenerateCV }                     from '../interface/iGenerateCV'
 import { IUser }                           from '../../../model/user'
 import { CvModel, ICv }                    from '../../../model/cv'
-import CvRepository                        from '../../../repository/impl/cvRepositoryImpl'
+import CvRepository                        from '../../../repository/cv/cvRepositoryImpl'
 
 class GenerateMessageExecutor implements MessageExecutor {
 

@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from 'express'
 import MessageExecutor                     from '../../../service/executor/messageExecutor'
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { IDestroyPortfolio }               from '../interface/iDestroyPortfolio'
-import PortfolioRepository                 from '../../../repository/portfolioRepository'
+import PortfolioRepository                 from '../../../repository/portfolio/portfolioRepository'
 
 class DestroyMessageExecutor implements MessageExecutor {
 

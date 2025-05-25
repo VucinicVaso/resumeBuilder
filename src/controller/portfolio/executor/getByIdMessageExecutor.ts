@@ -3,7 +3,7 @@ import MessageExecutor                     from '../../../service/executor/messa
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { IGetPortfolioById }               from '../interface/iGetPortfolioById'
 import { IPortfolio }                      from '../../../model/portfolio'
-import PorftolioRepository                 from '../../../repository/portfolioRepository'
+import PorftolioRepository                 from '../../../repository/portfolio/portfolioRepository'
 
 class GetByIdMessageExecutor implements MessageExecutor {
 

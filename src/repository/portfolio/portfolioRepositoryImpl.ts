@@ -1,6 +1,6 @@
 import{ Types }                       from 'mongoose'
 import { IPortfolio, PortfolioModel } from '../../model/portfolio'
-import PortfolioRepository            from '../portfolioRepository'
+import PortfolioRepository            from './portfolioRepository'
 
 class PortfolioRepositoryImpl extends PortfolioRepository {
 

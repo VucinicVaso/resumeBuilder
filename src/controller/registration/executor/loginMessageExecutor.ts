@@ -3,7 +3,7 @@ import MessageExecutor                     from '../../../service/executor/messa
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { ILoginUser }                      from '../interface/iLoginUser'
 import { IUser }                           from '../../../model/user'
-import UserRepository                      from '../../../repository/userRepository'
+import UserRepository                      from '../../../repository/user/userRepository'
 
 class LoginMessageExecutor implements MessageExecutor {
 

@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from 'express'
 import MessageExecutor                     from '../../../service/executor/messageExecutor'
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { IDestroyExperience }              from '../interface/iDestroyExperience'
-import ExperienceRepository                from '../../../repository/experienceRepository'
+import ExperienceRepository                from '../../../repository/experience/experienceRepository'
 
 class DestroyMessageExecutor implements MessageExecutor {
 

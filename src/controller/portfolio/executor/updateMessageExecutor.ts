@@ -3,7 +3,7 @@ import MessageExecutor                     from '../../../service/executor/messa
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { IUpdatePortfolio }                from '../interface/iUpdatePortfolio'
 import { IPortfolio }                      from '../../../model/portfolio'
-import PortfolioRepository                 from '../../../repository/portfolioRepository'
+import PortfolioRepository                 from '../../../repository/portfolio/portfolioRepository'
 
 class UpdateMessageExecutor implements MessageExecutor {
 

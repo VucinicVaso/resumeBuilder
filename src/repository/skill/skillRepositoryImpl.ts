@@ -1,6 +1,6 @@
 import{ Types }               from 'mongoose'
 import { ISkill, SkillModel } from '../../model/skill'
-import SkillRepository        from '../skillRepository'
+import SkillRepository        from './skillRepository'
 
 class SkillRepositoryImpl extends SkillRepository {
 

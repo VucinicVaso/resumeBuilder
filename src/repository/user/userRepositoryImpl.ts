@@ -3,7 +3,7 @@ import bcrypt                  from 'bcryptjs'
 import { IUser, UserModel }    from '../../model/user'
 import JwtGenerator            from '../../util/jwt/jwtGenerator'
 import Environment             from '../../util/enviroment/environment'
-import UserRepository          from '../userRepository'
+import UserRepository          from './userRepository'
 
 class UserRepositoryImpl extends UserRepository {
 

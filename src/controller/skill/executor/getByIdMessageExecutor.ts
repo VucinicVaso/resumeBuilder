@@ -3,7 +3,7 @@ import MessageExecutor                     from '../../../service/executor/messa
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { IGetSkillById }                   from '../interface/iGetSkillById'
 import { ISkill }                          from '../../../model/skill'
-import SkillRepository                     from '../../../repository/skillRepository'
+import SkillRepository                     from '../../../repository/skill/skillRepository'
 
 class GetByIdMessageExecutor implements MessageExecutor {
 

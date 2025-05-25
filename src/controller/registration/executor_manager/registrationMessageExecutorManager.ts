@@ -2,8 +2,8 @@ import JoiValidationMiddleware from '../../../util/middleware/joiValidationMiddl
 import MessageExecutorManager  from '../../../service/executor/messageExecutorManager'
 import RegisterMessageExecutor from '../executor/registerMessageExecutor'
 import LoginMessageExecutor    from '../executor/loginMessageExecutor'
-import UserRepository          from '../../../repository/userRepository'
-import UserRepositoryImpl      from '../../../repository/impl/userRepositoryImpl'
+import UserRepository          from '../../../repository/user/userRepository'
+import UserRepositoryImpl      from '../../../repository/user/userRepositoryImpl'
 import { RegisterValidation }  from '../validator/registrationValidation'
 import { LoginValidation }     from '../validator/loginValidation'
 

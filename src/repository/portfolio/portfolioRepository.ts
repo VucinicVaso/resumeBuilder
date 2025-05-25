@@ -1,4 +1,4 @@
-import { IPortfolio } from '../model/portfolio'
+import { IPortfolio } from '../../model/portfolio'
 
 abstract class PortfolioRepository {
 

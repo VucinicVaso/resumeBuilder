@@ -3,7 +3,7 @@ import MessageExecutor                     from '../../../service/executor/messa
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { IGetCVById }                      from '../interface/iGetCVById'
 import { ICv }                             from '../../../model/cv'
-import CvRepository                        from '../../../repository/impl/cvRepositoryImpl'
+import CvRepository                        from '../../../repository/cv/cvRepositoryImpl'
 
 class GetByIdMessageExecutor implements MessageExecutor {
 

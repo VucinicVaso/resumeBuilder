@@ -4,7 +4,7 @@ import AppMiddleware                       from './appMiddleware'
 import MessageExecutor                     from '../../service/executor/messageExecutor'
 import Environment                         from '../enviroment/environment'
 import { IUser }                           from '../../model/user'
-import UserRepository                      from '../../repository/userRepository'
+import UserRepository                      from '../../repository/user/userRepository'
 
 /**
  * Middleware for validating json web token from received HTTP request 
