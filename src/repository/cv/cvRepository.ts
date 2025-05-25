@@ -1,4 +1,4 @@
-import { ICv } from '../model/cv'
+import { ICv } from '../model/cv/cv'
 
 abstract class CvRepository {
 
