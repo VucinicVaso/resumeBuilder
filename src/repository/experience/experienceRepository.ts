@@ -1,4 +1,4 @@
-import { IExperience } from '../../model/experience'
+import { IExperience } from '../../model/experience/experience'
 
 abstract class ExperienceRepository {
 

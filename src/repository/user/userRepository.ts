@@ -1,5 +1,5 @@
 import{ Types } from 'mongoose'
-import { IUser } from '../../model/user'
+import { IUser } from '../../model/user/user'
 
 abstract class UserRepository {
 

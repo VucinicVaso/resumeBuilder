@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from 'express'
 import MessageExecutor                     from '../../../service/executor/messageExecutor'
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { ICreatePortfolio }                from '../interface/iCreatePortfolio'
-import { IPortfolio }                      from '../../../model/portfolio'
+import { IPortfolio }                      from '../../../model/portfolio/portfolio'
 import PortfolioRepository                 from '../../../repository/portfolio/portfolioRepository'
 
 class CreateMessageExecutor implements MessageExecutor {

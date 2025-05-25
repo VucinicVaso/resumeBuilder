@@ -1,5 +1,5 @@
 import{ Types }                         from 'mongoose'
-import { IExperience, ExperienceModel } from '../../model/experience'
+import { IExperience, ExperienceModel } from '../../model/experience/experience'
 import ExperienceRepository             from './experienceRepository'
 
 class ExperienceRepositoryImpl extends ExperienceRepository {

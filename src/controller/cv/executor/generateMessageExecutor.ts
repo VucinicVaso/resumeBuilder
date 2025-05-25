@@ -4,8 +4,8 @@ var pdf                                    = require('pdf-creator-node')
 import MessageExecutor                     from '../../../service/executor/messageExecutor'
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { IGenerateCV }                     from '../interface/iGenerateCV'
-import { IUser }                           from '../../../model/user'
-import { CvModel, ICv }                    from '../../../model/cv'
+import { IUser }                           from '../../../model/user/user'
+import { CvModel, ICv }                    from '../../../model/cv/cv'
 import CvRepository                        from '../../../repository/cv/cvRepositoryImpl'
 
 class GenerateMessageExecutor implements MessageExecutor {

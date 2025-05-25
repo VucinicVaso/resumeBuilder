@@ -1,5 +1,5 @@
 import{ Types }                       from 'mongoose'
-import { IEducation, EducationModel } from '../../model/education'
+import { IEducation, EducationModel } from '../../model/education/education'
 import EducationRepository            from './educationRepository'
 
 class EducationRepositoryImpl extends EducationRepository {

@@ -1,4 +1,4 @@
-import { ISkill } from '../../model/skill'
+import { ISkill } from '../../model/skill/skill'
 
 abstract class SkillRepository {
 

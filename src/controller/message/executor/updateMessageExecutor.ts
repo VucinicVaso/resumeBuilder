@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from 'express'
 import MessageExecutor                     from '../../../service/executor/messageExecutor'
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { IUpdateMessage }                  from '../interface/iUpdateMessage'
-import { IMessage }                        from '../../../model/message'
+import { IMessage }                        from '../../../model/message/message'
 import MessageRepository                   from '../../../repository/message/messageRepository'
 
 class UpdateMessageExecutor implements MessageExecutor {

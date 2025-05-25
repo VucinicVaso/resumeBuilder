@@ -1,4 +1,4 @@
-import { IEducation } from '../../model/education'
+import { IEducation } from '../../model/education/education'
 
 abstract class EducationRepository {
 

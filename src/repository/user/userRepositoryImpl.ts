@@ -1,6 +1,6 @@
 import{ Types }                from 'mongoose'
 import bcrypt                  from 'bcryptjs'
-import { IUser, UserModel }    from '../../model/user'
+import { IUser, UserModel }    from '../../model/user/user'
 import JwtGenerator            from '../../util/jwt/jwtGenerator'
 import Environment             from '../../util/enviroment/environment'
 import UserRepository          from './userRepository'

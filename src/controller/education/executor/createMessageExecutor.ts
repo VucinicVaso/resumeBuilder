@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from 'express'
 import MessageExecutor                     from '../../../service/executor/messageExecutor'
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { ICreateEducation }                from '../interface/iCreateEducation'
-import { IEducation }                      from '../../../model/education'
+import { IEducation }                      from '../../../model/education/education'
 import EducationRepository                 from '../../../repository/education/educationRepository'
 
 class CreateMessageExecutor implements MessageExecutor {

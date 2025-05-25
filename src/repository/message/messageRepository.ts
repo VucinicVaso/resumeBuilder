@@ -1,4 +1,4 @@
-import { IMessage } from '../../model/message'
+import { IMessage } from '../../model/message/message'
 
 abstract class MessageRepository {
 

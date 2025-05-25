@@ -4,7 +4,7 @@ import AdminAuthorizationMiddleware from '../../../util/middleware/adminAuthoriz
 import MessageExecutorManager       from '../../../service/executor/messageExecutorManager'
 import UserRepository               from '../../../repository/user/userRepository'
 import UserRepositoryImpl           from '../../../repository/user/userRepositoryImpl'
-import CvRepository                 from '../../../repository/cvRepository'
+import CvRepository                 from '../../../repository/cv/cvRepository'
 import CvRepositoryImpl             from '../../../repository/cv/cvRepositoryImpl'
 import GenerateMessageExecutor      from '../executor/generateMessageExecutor'
 import DestroyMessageExecutor       from '../executor/destroyMessageExecutor'

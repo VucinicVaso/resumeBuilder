@@ -3,7 +3,7 @@ import jwt                                 from 'jsonwebtoken'
 import AppMiddleware                       from './appMiddleware'
 import MessageExecutor                     from '../../service/executor/messageExecutor'
 import Environment                         from '../enviroment/environment'
-import { IUser }                           from '../../model/user'
+import { IUser }                           from '../../model/user/user'
 import UserRepository                      from '../../repository/user/userRepository'
 
 /**

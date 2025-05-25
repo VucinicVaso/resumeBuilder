@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from 'express'
 import MessageExecutor                     from '../../../service/executor/messageExecutor'
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { IGetPortfolioById }               from '../interface/iGetPortfolioById'
-import { IPortfolio }                      from '../../../model/portfolio'
+import { IPortfolio }                      from '../../../model/portfolio/portfolio'
 import PorftolioRepository                 from '../../../repository/portfolio/portfolioRepository'
 
 class GetByIdMessageExecutor implements MessageExecutor {

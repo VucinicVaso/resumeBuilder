@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from 'express'
 import MessageExecutor                     from '../../../service/executor/messageExecutor'
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { IGetCVById }                      from '../interface/iGetCVById'
-import { ICv }                             from '../../../model/cv'
+import { ICv }                             from '../../../model/cv/cv'
 import CvRepository                        from '../../../repository/cv/cvRepositoryImpl'
 
 class GetByIdMessageExecutor implements MessageExecutor {

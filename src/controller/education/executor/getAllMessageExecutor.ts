@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express'
 import MessageExecutor                     from '../../../service/executor/messageExecutor'
 import EducationRepository                 from '../../../repository/education/educationRepository'
-import { IEducation }                      from '../../../model/education'
+import { IEducation }                      from '../../../model/education/education'
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 
 class GetAllMessageExecutor implements MessageExecutor {

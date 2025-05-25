@@ -1,5 +1,5 @@
 import{ Types }         from 'mongoose'
-import { ICv, CvModel } from '../../model/cv'
+import { ICv, CvModel } from '../../model/cv/cv'
 import CvRepository     from '../cvRepository'
 
 class CvRepositoryImpl extends CvRepository {

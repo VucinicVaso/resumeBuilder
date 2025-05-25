@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from 'express'
 import MessageExecutor                     from '../../../service/executor/messageExecutor'
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { ICreateExperience }               from '../interface/iCreateExperience'
-import { IExperience }                     from '../../../model/experience'
+import { IExperience }                     from '../../../model/experience/experience'
 import ExperienceRepository                from '../../../repository/experience/experienceRepository'
 
 class CreateMessageExecutor implements MessageExecutor {
