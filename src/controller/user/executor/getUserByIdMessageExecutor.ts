@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express'
-import MessageExecutor                     from '../../../util/executor/messageExecutor'
+import MessageExecutor                     from '../../../service/executor/messageExecutor'
 import { IUser }                           from '../../../model/user'
 import { IGetUserById }                    from '../interface/iGetUserById'
 import UserRepository                      from '../../../repository/userRepository'

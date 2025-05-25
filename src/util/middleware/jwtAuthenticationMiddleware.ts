@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express'
 import jwt                                 from 'jsonwebtoken'
 import AppMiddleware                       from './appMiddleware'
-import MessageExecutor                     from '../executor/messageExecutor'
+import MessageExecutor                     from '../../service/executor/messageExecutor'
 import Environment                         from '../enviroment/environment'
 import { IUser }                           from '../../model/user'
 import UserRepository                      from '../../repository/userRepository'

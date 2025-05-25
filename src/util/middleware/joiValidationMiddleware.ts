@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express'
 import Joi                                 from 'joi'
 import AppMiddleware                       from './appMiddleware'
-import MessageExecutor                     from '../executor/messageExecutor'
+import MessageExecutor                     from '../../service/executor/messageExecutor'
 
 /**
  * Middleware for validating body from received HTTP request

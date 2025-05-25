@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express'
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
-import MessageExecutor                     from '../../../util/executor/messageExecutor'
+import MessageExecutor                     from '../../../service/executor/messageExecutor'
 import { IMessage }                        from '../../../model/message'
 import MessageRepository                   from '../../../repository/messageRepository'
 

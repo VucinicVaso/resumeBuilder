@@ -3,7 +3,7 @@ import colors        from 'colors'
 import morgan        from 'morgan'
 import Environment   from './util/enviroment/environment'
 import Database      from './service/database/database'
-import AppRouter     from './router/router'
+import AppRouterImpl from './router/impl/appRouterImpl'
 import AppMiddleware from './util/middleware/appMiddleware'
 
 class Server {
@@ -32,7 +32,8 @@ class Server {
         this.app.use(express.urlencoded({ extended: false }))
         this.app.use(morgan('tiny'))
         this.app.use('/static', express.static('src/assets'))
-        new AppRouter(this.app!)
+       
+        new AppRouterImpl(this.app!)
         this.app.use(AppMiddleware.routeNotFound) // middleware for route not found
         this.app.use(AppMiddleware.errorHandler)  // middleware for error handling
 

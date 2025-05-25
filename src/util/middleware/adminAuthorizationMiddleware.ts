@@ -15,6 +15,7 @@ class AdminAuthorizationMiddleware implements MessageExecutor {
 
     public async execute(request: Request, response: Response, next: NextFunction): Promise<void> {
         console.log('-- AdminAuthorizationMiddleware execute') //delete this line
+        
         if(request.user!.isAdmin == true) {
             this.executor!.execute(request, response, next)
         }else {

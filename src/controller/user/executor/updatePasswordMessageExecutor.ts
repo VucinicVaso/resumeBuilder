@@ -3,10 +3,10 @@ import bcrypt                              from 'bcryptjs'
 import { IUpdateUsersPassword }            from '../interface/iUpdateUsersPassword'
 import { IUser }                           from '../../../model/user'
 import UserRepository                      from '../../../repository/userRepository'
-import MethodExecutor                      from '../../../util/executor/messageExecutor'
+import MessageExecutor                     from '../../../service/executor/messageExecutor'
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 
-class UpdatePasswordMessageExecutor implements MethodExecutor {
+class UpdatePasswordMessageExecutor implements MessageExecutor {
 
     private userRepository?: UserRepository
 

@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express'
-import MessageExecutor                     from '../../../util/executor/messageExecutor'
+import MessageExecutor                     from '../../../service/executor/messageExecutor'
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { ICreateSkill }                    from '../interface/iCreateSkill'
 import { ISkill }                          from '../../../model/skill'

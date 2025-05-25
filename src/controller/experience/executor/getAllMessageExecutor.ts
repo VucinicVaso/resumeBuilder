@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express'
-import MessageExecutor                     from '../../../util/executor/messageExecutor'
+import MessageExecutor                     from '../../../service/executor/messageExecutor'
 import ExperienceRepository                from '../../../repository/experienceRepository'
 import { IExperience }                     from '../../../model/experience'
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'

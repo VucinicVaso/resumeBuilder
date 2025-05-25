@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express'
-import MessageExecutor                     from '../../../util/executor/messageExecutor'
+import MessageExecutor                     from '../../../service/executor/messageExecutor'
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { IDestroyEducation }               from '../interface/iDestroyEducation'
 import EducationRepository                 from '../../../repository/educationRepository'

@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express'
 import fs                                  from 'fs'
 var pdf                                    = require('pdf-creator-node')
-import MessageExecutor                     from '../../../util/executor/messageExecutor'
+import MessageExecutor                     from '../../../service/executor/messageExecutor'
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { IGenerateCV }                     from '../interface/iGenerateCV'
 import { IUser }                           from '../../../model/user'

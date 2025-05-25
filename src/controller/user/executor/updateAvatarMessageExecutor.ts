@@ -1,11 +1,11 @@
 import { NextFunction, Request, Response } from 'express'
-import MethodExecutor                      from '../../../util/executor/messageExecutor'
+import MessageExecutor                     from '../../../service/executor/messageExecutor'
 import AppMiddleware                       from '../../../util/middleware/appMiddleware'
 import { IUpdateUsersAvatar }              from '../interface/iUpdateUsersAvatar'
 import { IUser }                           from '../../../model/user'
 import UserRepository                      from '../../../repository/userRepository'
 
-class UpdateAvatarMessageExecutor implements MethodExecutor {
+class UpdateAvatarMessageExecutor implements MessageExecutor {
 
     private userRepository?: UserRepository
 

@@ -32,6 +32,7 @@ PAKETI=(
     colors                    # ( install colors package for console logs )
     multer                    # ( install package for uploading files )
     @types/multer             # ( install type definition for multer package )
+    pdf-creator-node          # ( install pdf creator package )
 )
 
 # Instalacija paketa
