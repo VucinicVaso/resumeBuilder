@@ -4,9 +4,9 @@
 ## About:
 Aplikacija za generisanje CV-ja.
 
-### rest api (backend application): Kreiran u Express.js-u (Typescript, MongoDB (Mongoose), ...). 
-    Rest api za front (user / admin) web i mobilne aplikacije
-
+### rest api (backend application):
+    - Kreiran pomocu Express.js-a, Typescript-a, MongoDB (Mongoose),
+    - Rest api za front (user / admin) web i mobilne aplikacije
 ### frontend applications
 - user-frontend app:
     - https://github.com/VucinicVaso/resumeBuilderUser
