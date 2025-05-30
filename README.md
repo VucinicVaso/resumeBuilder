@@ -5,23 +5,23 @@
 Aplikacija za generisanje CV-ja.
 
 ### rest api (backend app): Kreiran u Express.js-u (Typescript, MongoDB (Mongoose), ...). 
-    '''
+'''
     Rest api za front (user / admin) web i mobilne aplikacije
-    '''
+'''
 ### frontend applications
-    - user-frontend app:
-        https://github.com/VucinicVaso/resumeBuilderUser
-        '''
-        Prikazuju se podaci: portfolio, skills, education, experience, contact form... 
-        Kreiran pomocu HTML5, CSS3, Bootstrap-a, React.js... 
-        Potrebno je kreirati vise UI-a. 
-        Svaki put kada korisnik otvori sajt prikazat ce se nasumicni UI,
-        '''
-    - admin-frontend app: Admin dashboard. 
-        '''
-        Kreirati pomocu HTML5, CSS3, Bootstrap-a, React.js... 
-        Preko dashboard-a vrsit ce se CRUD za: portfolio, skills, education, experience,        messages, kreiranje cv-a, cover letter-a....
-        '''
+- user-frontend app:
+    https://github.com/VucinicVaso/resumeBuilderUser
+'''
+    Prikazuju se podaci: portfolio, skills, education, experience, contact form... 
+    Kreiran pomocu HTML5, CSS3, Bootstrap-a, React.js... 
+    Potrebno je kreirati vise UI-a. 
+    Svaki put kada korisnik otvori sajt prikazat ce se nasumicni UI,
+'''
+- admin-frontend app: Admin dashboard. 
+'''
+    Kreirati pomocu HTML5, CSS3, Bootstrap-a, React.js... 
+    Preko dashboard-a vrsit ce se CRUD za: portfolio, skills, education, experience,        messages, kreiranje cv-a, cover letter-a....
+'''
 
 
 ## HOW-TO: 
